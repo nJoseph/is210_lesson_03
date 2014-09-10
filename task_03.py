@@ -2,12 +2,6 @@
 # -*- coding: utf-8 -*-
 """Nested statements"""
 
-BASE = ""
-ACCENT = ""
-HIGHLIGHT = ""
-CHOICE_1 = ""
-CHOICE_2 = ""
-CHOICE_7 = ""
 CHOICE_1 = raw_input("Please choose between Seattle Gray"
                      " or Manatee ")
 CHOICE_2 = raw_input("Please choose between Ceramic Glaze"
