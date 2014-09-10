@@ -15,6 +15,5 @@ if CHOICE_1 == "Seattle Gray" or CHOICE_1 == "Manatee":
     if CHOICE_7 == "Basically White" or CHOICE_7 == "White":
             HIGHLIGHT = CHOICE_7
 
-print "The color chosen for base is {color1}.".format(color1=BASE)
-print "The color chosen for accent is {color2}.".format(color2=ACCENT)
-print "The color chosen for the highlight is {color3}.".format(color3=HIGHLIGHT)
+print "The colors chosen are {a}, {b}, {c}.".format(a=BASE, b=ACCENT,
+                                                    c=HIGHLIGHT)
