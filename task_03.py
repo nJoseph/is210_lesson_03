@@ -32,5 +32,6 @@ if CHOICE_1 == "Seattle Gray" or CHOICE_1 == "Manatee":
                                         " Fractal White or Not White")
 
 
-print BASE, ACCENT, HIGHLIGHTER
+print "The colors are {c1}, {c2}, {c3}.".format(c1=BASE, c2= ACCENT,
+                                                c3=HIGHLIGHTER)
         
