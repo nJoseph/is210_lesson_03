@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """Nested statements"""
 
-BASE = "You didn't specify."
-ACCENT = "You didn't specify."
-HIGHLIGHT = "You didn't specify."
+BASE = ""
+ACCENT = ""
+HIGHLIGHT = ""
 CHOICE_1 = ""
 CHOICE_2 = ""
 CHOICE_7 = ""
