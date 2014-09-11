@@ -93,7 +93,7 @@ Loan Report for: {name}
      Duration:       {dur:>15}
      Pre-qualified?: {qual:>15}
      
-     Total:          ${tot:>15,}"""
+     Total:          ${tot:>15}"""
 if TOTAL:
     REPORT = REPORT.format(name=NAME, prin=PRINCIPAL,
                            dur=str(YEARS)+"yrs",
@@ -102,5 +102,5 @@ if TOTAL:
 else:
     REPORT = REPORT.format(name= NAME, prin=PRINCIPAL,
                            dur=str(YEARS)+"yrs",
-                           qual=QUALIFY, tot="None")
+                           qual=QUALIFY, tot=str(TOTAL))
     print REPORT
