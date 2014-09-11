@@ -84,7 +84,7 @@ else:
     RATE = 0
 
 if TOTAL:
-    TOTAL = int(round(PRINCIPAL * ((1 + Decimal(RATE/12))**(12*YEARS))))
+    AMOUNT = int(round(PRINCIPAL * (1+ RATE/12)**(12*YEARS)))
 
 REPORT = """
 Loan Report for: {0}
@@ -98,7 +98,7 @@ if TOTAL:
     REPORT = REPORT.format(NAME,
                            ("$" + str('{:,}'.format(PRINCIPAL))),
                            str(YEARS)+"yrs",
-                           QUALIFY, ("$"+str('{:,}'.format(TOTAL))))
+                           QUALIFY, ("$"+str('{:,}'.format(AMOUNT))))
     print REPORT
 else:
     REPORT = REPORT.format(NAME,
