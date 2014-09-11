@@ -87,5 +87,7 @@ if TOTAL:
                            qual=QUALIFY, tot="$"+str(TOTAL))
     print REPORT
 else:
-    print "ERROR"
-
+    REPORT = EVALUATION.format(name= NAME, prin="$"+str(PRINCIPAL)
+                               , dur=str(YEARS)+"yrs",
+                               qual=QUALIFY, tot="None")
+    print REPORT
