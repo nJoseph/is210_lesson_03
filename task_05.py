@@ -9,52 +9,39 @@ YEARS = int(raw_input("How many years is this loan being borrowed? "))
 QUALIFY = raw_input("Are you qualified for this loan?"
                     " Acceptable answers are either: Yes, y, No, or n")
 TOTAL = True
-if PRINCIPAL < 200000 and PRINCIPAL >=0:
-    if YEARS <= 15:
+if PRINCIPAL < 200000:
+    if YEARS < 16:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0363")
+            RATE = 0.0363
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = Decimal("0.0465")
-    elif YEARS >= 16 and YEARS <=20:
+            RATE = 0.0465
+    elif YEARS <21:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0404")
+            RATE = 0.0404
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = Decimal("0.0498")
-    elif YEARS >=21 and YEARS <=21:
-        if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0577")
+            RATE = 0.0498
+    elif YEARS <= 30:
+        if QUALIFY== "Yes" or QUALIFY == "y":
+            RATE = 0.0577
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = Decimal("0.0639")
+            RATE = 0.0639
     else:
         TOTAL = None
         RATE = 0
-elif PRINCIPAL >= 200000 and PRINCIPAL <=999999:
-    if YEARS <= 15:
+elif PRINCIPAL < 1000000:
+    if YEARS <16:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0302")
+            RATE = 0.0302
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = Decimal("0.0398")
-    elif YEARS >= 16 and YEARS <=20:
+            RATE = 0.0398
+    elif YEARS < 21:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0327")
+            RATE = 0.0327
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = Decimal("0.0408")
-    elif YEARS >= 21 and YEARS <=30:
+            RATE = 0.0408
+    elif YEARS <= 30:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0466")
-    else:
-        TOTAL = None
-        RATE = 0
-elif PRINCIPAL > 1000000:
-    if YEARS <=15:
-        if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0205")
-        else:
-            TOTAL = None
-            RATE = 0
-    elif YEARS >= 16 and YEARS <=20:
-        if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = Decimal("0.0262")
+            RATE = 0.0466
         else:
             TOTAL = None
             RATE = 0
@@ -62,8 +49,21 @@ elif PRINCIPAL > 1000000:
         TOTAL = None
         RATE = 0
 else:
-    TOTAL = None
-    RATE = 0
+    if YEARS <16:
+        if QUALIFY == "Yes" or QUALIFY == "y":
+            RATE = 0.0205
+        else:
+            TOTAL = None
+            RATE = 0
+    elif YEARS < 21:
+        if QUALIFY == "Yes" or QUALIFY == "y":
+            RATE = 0.0262
+        else:
+            TOTAL = None
+            RATE = 0
+    else:
+        TOTAL = None
+        RATE = 0
 
 if TOTAL != None:
     TOTAL = int(round(PRINCIPAL * (1+ RATE/12)**(12*YEARS)))
