@@ -89,11 +89,11 @@ if TOTAL:
 REPORT = """
 Loan Report for: {name}
 ------------------------------------------------------------------------------
-     Principal:      {prin:>15,}
+     Principal:      ${prin:>15,}
      Duration:       {dur:>15}
      Pre-qualified?: {qual:>15}
      
-     Total:          {tot:>15,}"""
+     Total:          ${tot:>15,}"""
 if TOTAL:
     REPORT = REPORT.format(name=NAME, prin=PRINCIPAL,
                            dur=str(YEARS)+"yrs",
