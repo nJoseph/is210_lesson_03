@@ -83,7 +83,7 @@ else:
     TOTAL = None
     RATE = 0
 
-if TOTAL:
+if TOTAL != None:
     AMOUNT = int(round(PRINCIPAL * (1+ RATE/12)**(12*YEARS)))
 
 REPORT = """
