@@ -86,7 +86,7 @@ else:
 if TOTAL:
     TOTAL = int(round(PRINCIPAL*(1 + RATE/12)**(12*YEARS)))
 
-EVALUATION = """
+REPORT = """
 Loan Report for: {name}
 ------------------------------------------------------------------------------
      Principal:      {prin:>15}
@@ -94,12 +94,12 @@ Loan Report for: {name}
      Pre-qualified?: {qual:>15}
      Total:          {tot:>15}"""
 if TOTAL:
-    REPORT = EVALUATION.format(name=NAME, prin="$"+str(PRINCIPAL)
+    REPORT = REPORT.format(name=NAME, prin="$"+str(PRINCIPAL)
                            , dur=str(YEARS)+"yrs",
                            qual=QUALIFY, tot="$"+str(TOTAL))
     print REPORT
 else:
-    REPORT = EVALUATION.format(name= NAME, prin="$"+str(PRINCIPAL)
+    REPORT = REPORT.format(name= NAME, prin="$"+str(PRINCIPAL)
                                , dur=str(YEARS)+"yrs",
                                qual=QUALIFY, tot="None")
     print REPORT
