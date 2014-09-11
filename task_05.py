@@ -73,8 +73,6 @@ else:
 
 if TOTAL:
     TOTAL = int(round(PRINCIPAL*(1 + RATE/12)**(12*YEARS)))
-else:
-    print "ERROR. You did not complete some or more of the fields."
 
 EVALUATION = """
 Loan Report for: {name}
@@ -83,8 +81,11 @@ Loan Report for: {name}
      Duration:       {dur:>15}
      Pre-qualified?: {qual:>15}
      Total:          {tot:>15}"""
-REPORT = EVALUATION.format(name=NAME, prin="$"+str(PRINCIPAL)
+if TOTAL:
+    REPORT = EVALUATION.format(name=NAME, prin="$"+str(PRINCIPAL)
                            , dur=str(YEARS)+"yrs",
                            qual=QUALIFY, tot="$"+str(TOTAL))
-print REPORT
+    print REPORT
+else:
+    print "ERROR"
 
