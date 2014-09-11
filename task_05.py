@@ -98,7 +98,7 @@ if TOTAL:
     REPORT = REPORT.format(NAME,
                            ("$" + str('{:,}'.format(PRINCIPAL))),
                            str(YEARS)+"yrs",
-                           QUALIFY, ("$"+str('{:,}'.format(AMOUNT))))
+                           QUALIFY, ("$"+str('{:,}'.format(TOTAL))))
     print REPORT
 else:
     REPORT = REPORT.format(NAME,
