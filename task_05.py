@@ -95,12 +95,12 @@ Loan Report for: {name}
      
      Total:          {tot:>15,}"""
 if TOTAL:
-    REPORT = REPORT.format(name=NAME, prin=PRINCIPAL
-                           , dur=str(YEARS)+"yrs",
+    REPORT = REPORT.format(name=NAME, prin=PRINCIPAL,
+                           dur=str(YEARS)+"yrs",
                            qual=QUALIFY, tot=TOTAL)
     print REPORT
 else:
-    REPORT = REPORT.format(name= NAME, prin=PRINCIPAL
-                               , dur=str(YEARS)+"yrs",
-                               qual=QUALIFY, tot="None")
+    REPORT = REPORT.format(name= NAME, prin=PRINCIPAL,
+                           dur=str(YEARS)+"yrs",
+                           qual=QUALIFY, tot="None")
     print REPORT
