@@ -63,7 +63,7 @@ elif PRINCIPAL >= 200000 and PRINCIPAL <=999999:
     else:
         TOTAL = None
         RATE = 0
-elif PRINCIPAL >= 1000000:
+elif PRINCIPAL > 1000000:
     if YEARS <=15:
         if QUALIFY == "Yes" or QUALIFY == "y":
             RATE = Decimal("0.0205")
