@@ -71,7 +71,7 @@ elif PRINCIPAL >= 1000000:
 else:
     TOTAL = None
 
-if TOTAL != None:
+if TOTAL:
     TOTAL = int(round(PRINCIPAL*(1 + RATE/12)**(12*YEARS)))
 else:
     print "ERROR. You did not complete some or more of the fields."
