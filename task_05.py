@@ -84,7 +84,7 @@ else:
     RATE = 0
 
 if TOTAL:
-    TOTAL = int(round(PRINCIPAL*(1 + RATE/12)**(12*YEARS)))
+    TOTAL = PRINCIPAL *(1+ RATE/12)
 
 REPORT = """
 Loan Report for: {0}
