@@ -12,36 +12,36 @@ TOTAL = True
 if PRINCIPAL < 200000:
     if YEARS < 16:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0363
+            RATE = Decimal("0.0363")
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = 0.0465
+            RATE = Decimal("0.0465")
     elif YEARS <21:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0404
+            RATE = Decimal("0.0404")
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = 0.0498
+            RATE = Decimal("0.0498")
     elif YEARS <= 30:
         if QUALIFY== "Yes" or QUALIFY == "y":
-            RATE = 0.0577
+            RATE = Decimal("0.0577")
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = 0.0639
+            RATE = Decimal("0.0639")
     else:
         TOTAL = None
         RATE = 0
 elif PRINCIPAL < 1000000:
     if YEARS <16:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0302
+            RATE = Decimal("0.0302")
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = 0.0398
+            RATE = Decimal("0.0398")
     elif YEARS < 21:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0327
+            RATE = Decimal("0.0327")
         elif QUALIFY == "No" or QUALIFY == "n":
-            RATE = 0.0408
+            RATE = Decimal("0.0408")
     elif YEARS <= 30:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0466
+            RATE = Decimal("0.0466")
         else:
             TOTAL = None
             RATE = 0
@@ -51,13 +51,13 @@ elif PRINCIPAL < 1000000:
 else:
     if YEARS <16:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0205
+            RATE = Decimal("0.0205")
         else:
             TOTAL = None
             RATE = 0
     elif YEARS < 21:
         if QUALIFY == "Yes" or QUALIFY == "y":
-            RATE = 0.0262
+            RATE = Decimal("0.0262")
         else:
             TOTAL = None
             RATE = 0
