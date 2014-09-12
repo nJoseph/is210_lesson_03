@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """Shows branching"""
 
-BLOOD_NUMBER = int(raw_input("Please enter your systolic blood pressure number "))
+BLOOD_NUMBER = int(raw_input("Please enter your "
+                             "systolic blood pressure number "))
 BP_STATUS = ""
 if BLOOD_NUMBER <= 89:
     BP_STATUS = "Low"

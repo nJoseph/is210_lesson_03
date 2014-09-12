@@ -4,7 +4,7 @@
 
 DAY = raw_input("What day is it? ").lower()[:3]
 TIME = int(raw_input("Please enter the time as a four"
-                 " digit number without a colon: "))
+                     " digit number without a colon: "))
 SNOOZE = True if DAY == "sat" or DAY == "sun" or TIME < 600 else False
-if SNOOZE == False:
+if not SNOOZE:
     print "BEEP!" * 5
