@@ -9,7 +9,7 @@ YEARS = int(raw_input("How many years is this loan being borrowed? "))
 QUALIFY = raw_input("Are you qualified for this loan?"
                     " Acceptable answers are either: Yes, y, No, or n")
 TOTAL = True
-if PRINCIPAL < 200000:
+if PRINCIPAL < 200000 and PRINCIPAL >=0:
     if YEARS < 16:
         if QUALIFY == "Yes" or QUALIFY == "y":
             RATE = Decimal("0.0363")
@@ -28,7 +28,7 @@ if PRINCIPAL < 200000:
     else:
         TOTAL = None
         RATE = 0
-elif PRINCIPAL < 1000000:
+elif PRINCIPAL < 1000000 and PRINCIPAL >=200000:
     if YEARS <16:
         if QUALIFY == "Yes" or QUALIFY == "y":
             RATE = Decimal("0.0302")
@@ -48,8 +48,8 @@ elif PRINCIPAL < 1000000:
     else:
         TOTAL = None
         RATE = 0
-else:
-    if YEARS <16:
+elif PRINCIPAL >= 1000000:
+    if YEARS < 16:
         if QUALIFY == "Yes" or QUALIFY == "y":
             RATE = Decimal("0.0205")
         else:
@@ -64,6 +64,9 @@ else:
     else:
         TOTAL = None
         RATE = 0
+else:
+    TOTAL = None
+
 
 if TOTAL != None:
     TOTAL = int(round(PRINCIPAL * (1+ RATE/12)**(12*YEARS)))
